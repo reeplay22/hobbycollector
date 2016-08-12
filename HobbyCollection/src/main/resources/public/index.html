@@ -1,0 +1,125 @@
+<DOCTYPE ! HTML>
+<html>
+<link rel="stylesheet"	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/jquery.tablesorter.js"></script>
+<script src="/index.js"></script>
+<title>Index Of Your Collection!</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Collectables</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+      	<li><a href="/collectable/add"><span class="glyphicon glyphicon-plus"></span>Add</a></li>
+        <li><a href="/collectable/create-color"><span class="glyphicon glyphicon-tint"></span>Create-Color</a></li>
+        <li><a href="/collectable/update-color"><span class="glyphicon glyphicon-adjust"></span>Update-Color</a></li>
+        <li><a href="/collectable/create-category"><span class="glyphicon glyphicon-plus-sign"></span>Create-Category</a></li>
+        <li><a href="/collectable/update-category"><span class="glyphicon glyphicon-thumbs-up"></span>Update-Category</a></li>
+        <li><a href="/collectable/update"><span class="glyphicon glyphicon-ok"></span>Update-Table</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div>
+		<h1>Here are some collectables!</h1>
+	</div>
+
+	<div class="jumbotron">
+		<h3>Filters:</h3>
+		<div class="containers">
+		<label for="category">Category:</label> 
+		<select id="category">	
+		<option value=0 >Select Category</option>
+		</select> 
+		
+		<label for="condition">Condition:</label> 
+		<select id="condition">
+			<option value=0>select a condition</option>
+			<option value=1>Mint</option>
+			<option value=2>Average</option>
+			<option value=3>Poor</option>
+			
+		</select> <label for="name">Name:</label> <input id="name" type="text" value="" />
+		<label for="brand">Brand:</label> <select id="brand">
+		<option value=0>Select a Brand</option>
+		<option value=1>Nike</option>
+		</select> 
+		
+		<label for="description">Description:</label> <input
+			id="description" type="text" value="" /> <br> <label for="quantity">Quantity:</label>
+		<input id="quantity" type="text" value="" />
+<<<<<<< HEAD
+
+
+		<div class="container">
+			
+			
+=======
+			<label for="price">Price:</label> <input id="price" type="text" value="" /> 
+				
+>>>>>>> branch 'master' of git@git.catalystitservices.com:ccrosby/T1HobbyCollector.git
+				<label for="modelNumber">Model Number:</label> 
+				<input id="modelNumber" type="text" value="" />
+			
+				<label for="color">Colors:</label>
+			<select id="color">
+				<option value=0>Select Color</option>
+			</select>
+		
+		</div>
+			<label for="Date">Date Min:</label> 		
+			<input id="dateMIN" type="date" /> 
+			
+			<label for="Date">Date Max:</label> 
+			<input id="dateMAX" type="date" />
+	
+		
+			<label for="Price">Price Min:</label> 		
+			<input id="priceMIN" type="text" /> 
+			
+			<label for="Price">Price Max:</label> 
+			<input id="priceMAX" type="text" />
+			
+		<div class="container">
+			<button id="filter">Filter</button>
+			
+			<button id="clear">Clear All Filters</button>
+	</div>
+	</div>
+	<br>
+	<div class="container">
+		<h2>Collectables</h2>
+		<div id="resultAmount">
+		</div>
+		<div class="container">
+			<button id="filterTen">10 Entries</button>
+		
+			<button id="filterTwentyFive">25 Entries</button>
+		
+			<button id="filterFifty">50 Entries</button>
+		</div> 
+		<table class="table table-bordered tablesorter" id="table">
+			<thead>
+				<th>Catalog Number</th>
+				<th>Name of Item</th>
+				<th>Quantity</th>
+				<th>Condition</th>
+				<th>Color</th>
+				<th>Category</th>
+				<th>Brand of Item</th>
+				<th>Model Number</th>
+				<th>Price of Item</th>
+				<th>Notes/Description</th>
+				<th>Time/Date added</th>
+			</thead>
+			<tbody id="result">
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><title>Color Update</title>
+<style>
+#color-box {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	left:10px;
+	top:10px;
+}
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/jscolor.js/"></script>
+<script src="/update-color.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Collectables</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+      	<li><a href="/collectable/index"><span class="glyphicon glyphicon-home"></span>Index</a></li>
+      	<li><a href="/collectable/add"><span class="glyphicon glyphicon-plus"></span>Add</a></li>
+        <li><a href="/collectable/create-color"><span class="glyphicon glyphicon-tint"></span>Create-Color</a></li>
+        <li><a href="/collectable/create-category"><span class="glyphicon glyphicon-plus-sign"></span>Create-Category</a></li>
+        <li><a href="/collectable/update-category"><span class="glyphicon glyphicon-thumbs-up"></span>Update-Category</a></li>
+        <li><a href="/collectable/update"><span class="glyphicon glyphicon-ok"></span>Update-Table</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      <div class = "container"><p> * Fields Are Required</p></div>
+      <div class = "container"><h1> Update Your Color Here<span class="glyphicon glyphicon-plus-sign"></span></h1></div>
+      <div class="container" id = "requiredColor">
+      
+                  <select id = "color">
+                        <option>Select a Color</option>
+                  </select>
+                  
+                  <label for="colorId">ColorId:</label> <input id="colorId" type="text"  readonly value="" />
+                  
+                  Color: <input id="colorPicker" class="jscolor jscolor-active" value=""></input>
+                  
+                  <label for="colorUpdate">*Color Name:</label> <input id="colorUpdate" type="text"  value="" />            
+      </div>
+      <div class="container" id="oldColor">Old Color:<div id="color-box"></div>
+      </div>
+      
+      <div class="container">
+                  <button id="submit" type="button"><span class="glyphicon glyphicon-cloud-upload"></span></button>
+      </div>
+      <div id = "success"></div>
+</body>
+</html>
